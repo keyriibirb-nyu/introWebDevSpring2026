@@ -5,9 +5,7 @@ This is an example of a test change.
 
 
 
-Class notes from day 1: 1/20/26
-
-Intro Web Dev Notes
+#Class notes from day 1: 1/20/26
 
 ## Navigation in Terminal
 
