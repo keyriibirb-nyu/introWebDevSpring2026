@@ -18,8 +18,6 @@ head contains info about the HTML file, links to style sheets and scripts to loa
 body provides content, text, images, links
 (what the user sees)
 
-
-
 <html>
 
 <head>
@@ -44,6 +42,7 @@ body provides content, text, images, links
 <a href="https://github.com/keyriibirb-nyu/introWebDevSpring2026/tree/main">Link to my GitHub</a>
 
 the image tag is an example of a self-closing tag, no opening and closing tags
+this is an image of a cat :>
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"/>
 
 
