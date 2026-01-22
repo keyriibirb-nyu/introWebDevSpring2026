@@ -6,7 +6,7 @@ HTML has the stucture of the page, CSS provides style and visual layout
 
 HTML tags/elements -- keywords are surrounded by angle brackets
 
-< tagname >  content  < /tagname >
+<tagname>  content  </tagname>
 opening tag, content, /closing tag
 
 
