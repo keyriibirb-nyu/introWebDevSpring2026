@@ -47,16 +47,3 @@ pushes the files
 git pull
 Pulls any new updates from GitHub into the clone folder
 
-
-
-
-
-Testing out if access keys will work to push work from VSCode to here:
-Access key
-birbaccesstoken
-
-git remote set-url origin https://keyriibirb-nyu:birbaccesstoken@github.com/keyriibirb-nyu/repo.git
-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
-
-
-Not successful so far, but not sure what we're supposed to do yet
