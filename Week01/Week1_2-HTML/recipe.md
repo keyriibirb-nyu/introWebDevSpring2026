@@ -5,7 +5,7 @@ This is a style of mapo tofu that deviates from the original Sichuan version.
 Instead of the Sichuan peppercorn's signature *mala* spice, 
 this version leans more into ground pork's savory potential.
     
-! [Bowl filled with rice, tofu, ground pork, and garnished with scallions.] (tofuPhoto.jpg)
+![Bowl filled with rice, tofu, ground pork, and garnished with scallions.](tofuPhoto.jpg)
 
 ---
 
