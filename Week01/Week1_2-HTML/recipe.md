@@ -1,24 +1,58 @@
-<!DOCTYPE html>
-<html>
-    <head>
-         <meta charset="UTF-8"/>
-         <meta name ="viewport" content="width=device-width, initial-scale=1"/>
-         <title>Recipe</title>
-    </head> 
-    <body>
-        <h1>Heading 1 is the most important text on the page. This is usually a marketing tagline/company name/page title. 
-        Only one h1 per page</h1>
-        <h2>Heading 2 -- can have as many h2-h6 as you want</h2>
-        <h3>Heading 3 -- this one is a little but smaller</h3>
-        <h4>Heading 4 -- aaaaaaaaaaa</h4>
-        <h5>Heading 5 -- h1-h3 is pretty normal lol </h5>
-        <h6>Heading 6 -- lil baby heading </h6>
-        <p>This is your HTML boilerplate. Save it w/out the notes as a quick starter file for HTML docs!</p>
+        # Mapo Tofu Recipe
+        ## Taiwanese-American Homestyle Version
+        ### Written by Kieran Jones
+        This is a style of mapo tofu that deviates from the original Sichuan version. 
+        Instead of the Sichuan peppercorn's signature *mala* spice, 
+        this version leans more into ground pork's savory potential.
+    
+        ![Bowl filled with rice, tofu, ground pork, and garnished with scallions.] (tofuPhoto.jpg)
 
+        ---
 
+        ## Ingredients
+        Makes **8** servings.
+        ### For the Sauce
+        - 2 tbsp *doubanjiang* (spicy chili bean paste)
+        - 2 tbsp oyster sauce
+        - 2 tbsp white miso
+        - 1 tbsp soy sauce
+        - 1/4 cup mirin or shaoxing cooking wine
+        - 1/2 cup warm water
+        - 2 tsp sesame oil
+        - 2 tsp cornstarch
+        ### For the Aromatics
+        - 4 cloves garlic, minced
+        - 2 tbsp ginger, minced
+        - 4 green onions, sliced, *greens and whites separated*
+        ### For the Mapo Tofu
+        - 2 tbsp neutral cooking oil
+        - 1 lb ground pork
+        - 32 oz (two blocks) tofu, soft or medium firmness
 
-    </body>
+        ---
 
+        ## Instructions
+        ### Setup
+        1. Combine the sauce ingredients in a medium bowl, whisk to combine. Set sauce aside.
+        2. Finely mince garlic and ginger. 
+            Slice the green onions, separating the whites and greens. 
+            Combine garlic, ginger, and green onion whites. 
+            Set the green onion greens aside for finishing and garnish.
+        3. Drain and cut the tofu into 1-inch chunks.
 
+        ### Cooking
+        1. Heat a large frying pan to medium-high heat.
+            Add 2 tbsp neutral oil to the hot pan. 
+            Add the garlic, ginger, and green onion whites.  
+        2. Saute, stirring frequently, until aromatics are fragrant, 1-2 minutes.
+        3. Add ground pork, stirring frequently and breaking up chunks, until pork is no longer pink.
+        4. Turn the heat down to medium. 
+            Add the sauce to the pan, stirring frequently, until the sauce begins to simmer.
+        5. Once the sauce has simmered, gently add the tofu. 
+            Coat the tofu with sauce, and stir occasionally until tofu is heated through.
+        6. Stir in green onion greens, then remove mapo tofu from the heat. Serve over white rice.
 
-</html>
+        
+
+       [Here's the link to the original recipe.](https://www.justonecookbook.com/mapo-tofu/)
+

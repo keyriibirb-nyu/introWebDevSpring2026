@@ -43,7 +43,7 @@ body provides content, text, images, links
 
 the image tag is an example of a self-closing tag, no opening and closing tags
 this is an image of a cat :>
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg"/>
+<img src="https://placecats.com/600/400"/>
 
 
 
