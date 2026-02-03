@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Intro to CSS Text and Spans</title>
+    <!-- This is how you wrtie an internal style sheet!!! -->
+    <style type="text/CSS">
+      /* comments are notated differetn in CSS. these styles apply only to this page */
+      
+      /* "*" is the universal selector */
+      * {
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        /* most specific to most general --> 
+        look for arial, then helvetica, then sans-serif setting */
+      }
+
+
+      /* ids are unique, assigned to one thing */
+      /* id selectors begin w '#' */
+      #really_important{
+        /* font weights only work if they are supported */
+        font-weight:bold;
+        font-size:xx-large;
+      }
+
+      /* class selectors begin w '.'' */
+      .align_right{
+        width: 50%;
+        text-align: right;
+      }
+
+      .align_justified{
+        text-align: justify;
+      }
+
+      .silly_text{
+        font-family: fantasy;
+      }
+
+
+      /* tag selectors apply to all piece w the tag */
+      /* ex: all heading2s */
+      /* 'color' means font color */
+      /* can use rgb(0,100,255), hex colors #000000, names of colors */
+      h2 {
+        color:tomato;
+        background-color:#c7eed0;
+      }
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- inline styling, will override style sheets -->
+     <!-- margin 20px 10px = top/bottom, right/left -->
+      <!-- margin 20px 10px 5px 5px = top, right, bottom, left -->
+    <h1 style="margin-top: 20px">This is a header -- header 1</h1>
+    <h2> This is the subtitle -- header 2</h2>
+    <p class="align_right"> Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Duis faucibus luctus orci. 
+      Ut id ligula nunc. Curabitur a nulla quis mi volutpat tristique. 
+      Proin maximus elementum convallis. Mauris nulla tortor, efficitur 
+      at fringilla ullamcorper, <span class="silly_text">ultrices ac velit. Etiam porttitor nunc 
+      quis arcu blandit suscipit. Donec sodales at quam id pellentesque. 
+      Ut bibendum tellus nunc, vitae elementum est varius vel. Ut sit amet 
+      consectetur eros. Quisque neque enim, maximus quis justo vel, lacinia 
+      feugiat ligula. Proin malesuada, dolor eu fringilla varius, orci nisi 
+      volutpat enim, sit amet tincidunt lectus mi ut enim.</span> Vestibulum ante 
+      ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+      Ut laoreet lectus tortor, a cursus nisi rutrum eget. </p>
+      <!-- span tag: selects what's inside it -->
+
+
+      <p id="really_important" class="align_justified">
+      Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Duis faucibus luctus orci. 
+      Ut id ligula nunc. Curabitur a nulla quis mi volutpat tristique. 
+      Proin maximus elementum convallis. Mauris nulla tortor, efficitur 
+      at fringilla ullamcorper, ultrices ac velit. Etiam porttitor nunc 
+      quis arcu blandit suscipit. Donec sodales at quam id pellentesque. 
+      Ut bibendum tellus nunc, vitae elementum est varius vel. Ut sit amet 
+      consectetur eros. Quisque neque enim, maximus quis justo vel, lacinia 
+      feugiat ligula. Proin malesuada, dolor eu fringilla varius, orci nisi 
+      volutpat enim, sit amet tincidunt lectus mi ut enim. Vestibulum ante 
+      ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+      Ut laoreet lectus tortor, a cursus nisi rutrum eget.
+      </p>
+
+
+
+
+
+  </body>
+</html>
