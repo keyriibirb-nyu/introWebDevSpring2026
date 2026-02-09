@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Recipe Webpage Wireframe</title>
+
+    <!-- internal style sheet -->
+    <style type="text/CSS">
+
+/* universal selector is always the first style */
+      * {
+        margin:0;
+        padding:0;
+      }
+
+      /* general formatting for div groups */
+      div{
+        margin: 5px;
+
+      }
+
+      /* this is the brand of the website ie. "Just One Cookbook" */
+      .website_label{
+        font-size: xx-large;
+        font-family: cursive;
+        padding: 30px;
+        background-color: rgb(255, 237, 233);
+        color:brown;
+      }
+
+      body {
+        font-family:Arial, Helvetica, sans-serif;
+      }
+
+      nav ul {
+        /* remove all bullet points */
+        list-style-type: none;
+        /* overflow text, whether it is visible/goes off */
+        overflow: hidden;
+        background-color:tomato;
+        /* when inline block: get rid of the space btwn letters */
+        font-size: 0;
+      }
+
+      nav li{
+        /* li displays block by default, don't want to share horiz space. */
+        /* changing from block to inline-block */
+        display: inline-block;
+        /* 1rem = 16px */
+        font-size: 1rem;
+      }
+
+      /* descendant selector */
+      /* only concerned w list items 的 anchor tags */
+      nav li a {
+        /* making an inline element display:block
+        will make it fill the space of the parent element, making it all clickable. */
+        display: block;
+        text-align: center;
+     
+        width: 100px;
+        padding: 10px 20px;
+   
+
+    /* remove default link styling */
+        color:brown;
+        text-decoration:none;
+      } 
+
+      /* change color of nav items when hovering */
+      nav li a:hover{
+        background-color:rgb(252, 191, 180);
+      } 
+
+      /* highlight active page */
+       .active{
+        background-color: violet;
+        color:purple;
+      }
+
+      /* hover is different over the active button 
+      matches the different color */
+       .active:hover{ 
+        /* slightly lighter purple */
+         background-color: rgb(235, 184, 235);
+      }
+
+      /* only one recipe title!!!! so # for id */
+      #recipe_title{
+        padding: 20px;
+        color:brown;
+      }
+
+      /* formatting subtitles */
+      .recipe_subtitle{
+        padding: 5px 0 5px 20px;
+        color:brown;
+      }
+
+      /* formatting standard text */
+      .recipe_text{
+        padding: 2px 0 2px 10px;
+        color:brown;
+
+      }
+
+
+    /* putting components of multiple columns in a list to group them, 
+    this is the formatting surrounding them */
+      .column_ul{
+        display: block;
+        padding: 10px 10px;
+        font-size: 0;
+
+      }
+
+      /* setting up formatting for two columns next to each other */
+      .column_2{
+        display: inline-block;
+        width: 50%;
+        padding: 0;
+        font-size: 1rem;
+      }
+      
+      /* setting up side column */
+      aside{
+        display:block;
+        border-style: dashed;
+        border-width: medium;
+        border-color:tomato;
+        background-color: rgb(250, 228, 224);
+        color:brown;
+
+        /* text padding */
+        padding: 5px 0 5px 10px;
+
+        /* extra between aside and img */
+        margin: 0 0 0 10px;
+      }
+
+      /* making the square dots for the ingredient list,
+      indenting the dots */
+      aside ul{
+        list-style-type: square;
+        padding-left: 30px;
+      }
+
+      /* padding between ingredient items */
+      aside ul li{
+        padding: 2px 0;
+      }
+
+       /* used for steps in the recipe */
+     ol li{
+        margin: 5px 0 5px 30px;
+        color: brown;
+
+    }
+ 
+    </style>
+
+  </head>
+
+<!-- NOTES -->
+
+
+
+
+<!-- I tried my best to incorporate the semantic elements, are divs redundant or should I do both <section> and <div> for example -->
+
+<!-- non-semantic elements-->
+
+    <!-- draw a box around an element/multiple element-->
+    <!-- <div></div> -->
+
+    <!-- draw a box within an element-->
+    <!-- <span></span> -->
+
+<!-- semantic elements-->
+
+    <!-- article: list of website articles to visit (and descriptions)-->
+    <!-- <article></article> -->
+
+    <!-- sidebar -->
+    <!-- <aside></aside> -->
+
+    <!-- nav: nav bar btwn multiple places -->
+    <!-- <nav></nav> -->
+
+    <!-- section: section of an article -->
+    <!-- <section></section> -->
+
+<!-- BODY: what the user will see -->
+<body>
+
+
+<!-- HEAD =/= HEADER -> head is behind the scenes, header is h1  -->
+<!-- HEADER: will be consistent across the website,
+ with only the active label changing based on where the user is -->
+
+ <header>
+
+    <!-- cookbook site name -->
+ <section>
+         <p class="website_label">Cooking Corner</p>
+    </section>
+       
+    <!-- nav bar -->
+     <nav>
+        <ul>
+          <li><a class="active" href="#">Recipes</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Tips & Tricks</a></li>
+        </ul>
+      </nav>
+</header>
+
+
+<!-- RECIPE INTRO -->
+<!-- title and description -->
+ <section>
+    <div>
+        <h1 id="recipe_title">Mapo Tofu 麻婆豆腐</h1>
+        <h2 class="recipe_subtitle">Taiwanese-American Homestyle Version</h2>
+        <p class="recipe_subtitle">This is a style of mapo tofu that deviates from the original Sichuan version. 
+            Instead of the Sichuan peppercorn's signature <em>mala</em> spice, 
+            this version leans more into ground pork's savory potential. </p>
+    </div>
+ </section>
+
+<!-- seciton with columns -->
+ <ul class="column_ul">
+
+    <!-- column 1 of 2: IMAGE -->
+    <li class="column_2">
+    <img width="100%"
+        src="./image/tofuPhoto.jpg" 
+        alt="Bowl filled with rice, tofu, ground pork, and garnished with scallions."
+        />
+    </li>
+
+    <!-- column 2 of 2: INGREDIENTS LIST -->
+    <li class="column_2">
+    <aside>
+        <h2>Ingredients</h2>
+        <p>Makes <strong>8</strong> servings.</p>
+        <!-- ul = unordered list, dot list-->
+        <h3>For the Sauce</h3>
+        <ul>
+            <li>2 tbsp <em>doubanjiang</em> (spicy chili bean paste)</li>
+            <li>2 tbsp oyster sauce</li>
+            <li>2 tbsp white miso</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1/4 cup mirin or shaoxing cooking wine</li>
+            <li>1/2 cup warm water </li>
+            <li>2 tsp sesame oil</li>
+            <li>2 tsp cornstarch</li>
+        </ul>
+        <h3>For the Aromatics</h3>
+        <ul>
+            <li>4 cloves garlic, minced</li>
+            <li>2 tbsp ginger, minced</li>
+            <li>4 green onions, sliced, <em>greens and whites separated</em></li>
+        </ul>
+        <h3>For the Mapo Tofu</h3>
+         <ul>
+             <li>2 tbsp neutral cooking oil</li>
+             <li>1 lb ground pork</li>
+            <li>32 oz (two blocks) tofu, soft or medium firmness</li>
+            <li>8 servings rice, on the side</li>
+        </ul>
+    </aside>
+    </li>
+ </ul>
+<!-- end columns -->
+
+
+<!-- INSTRUCTIONS -->
+ <section>
+    <div>
+        <!-- Title: H2 -->
+        <h2 class="recipe_subtitle">Instructions</h2>
+
+        <!-- secton label: SETUP -->
+        <h3 class="recipe_subtitle">Setup</h3>
+        <ol class="recipe_text">
+            <li>Combine the sauce ingredients in a medium bowl, whisk to combine. Set sauce aside.</li>
+            <li>Finely mince garlic and ginger. Slice the green onions, separating the whites and greens. 
+                Combine garlic, ginger, and green onion whites. 
+                Set the green onion greens aside for finishing and garnish.</li>
+            <li>Drain and cut the tofu into 1-inch chunks.</li>
+        </ol>
+
+        <!-- section label: COOKING -->
+        <h3 class="recipe_subtitle">Cooking</h3>
+        <ol class="recipe_text">
+            <li>Heat a large frying pan to medium-high heat.
+                Add 2 tbsp neutral oil to the hot pan. 
+                Add the garlic, ginger, and green onion whites.
+            </li>
+            <li>Saute, stirring frequently, until aromatics are fragrant, 1-2 minutes.
+            </li>
+            <li>Add ground pork, stirring frequently and breaking up chunks, until pork is no longer pink.
+            </li>
+            <li>Turn the heat down to medium. Add the sauce to the pan, stirring frequently, until the sauce begins to simmer.
+            </li>
+            <li>Once the sauce has simmered, gently add the tofu. Coat the tofu with sauce, and stir occasionally until tofu is heated through.</li>
+            <li>Stir in green onion greens, then remove mapo tofu from the heat. Serve over white rice.</li>
+        </ol>
+    </div>
+ </section>
+<!-- end instructions section -->
+
+<!-- Link to orig recipe -->
+ <div>
+    <a href="https://www.justonecookbook.com/mapo-tofu/" target="_blank">Here's the link to the original recipe.</a>
+ </div>
+</body>
+<!-- end body -->
+</html>
