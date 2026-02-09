@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Simple Navbar | Inline-Block</title>
+
+    <!-- internal style sheet -->
+    <style type="text/CSS">
+
+/* universal selector is always the first style, 
+you want a massive reset to overwrite w more specific styles further down */
+      * {
+        margin:0;
+        padding:0;
+      }
+
+      body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      ul {
+        /* remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        background-color:tomato;
+
+        /* make the parent element's font size 0 
+        when using inline block to get rid of the space btwn letters
+        (bc inline is usually for text)*/
+        font-size: 0;
+
+
+      }
+
+      li{
+        /* li displays block by default, don't want to share horiz space. */
+        /* changing from block to inline-block */
+
+        display: inline-block;
+        /* 1rem = 16px */
+        font-size: 1rem;
+      }
+
+      /* descendant selector */
+      /* only concerned w list items 的 anchor tags */
+      li a {
+        /* making an inline element display:block
+        will make it fill the space of the parent element, making it all clickable. */
+        display: block;
+        text-align: center;
+
+        /* making it look like a button */
+        width: 100px;
+
+        /* top, right, bottom, left */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
+
+        /* overridden by top/bottom 10, right/left, 20 */
+        padding: 10px 20px;
+
+
+        /* remove default link styling */
+        color:brown;
+        text-decoration:none;
+      }
+
+      /* highlight active page */
+      .active{
+        background-color: cornflowerblue;
+      }
+
+      /* pseudo class-selector */
+      /* list items anchor tags when hovering */
+      li a:hover{
+        background-color:red;
+      }
+
+    </style>
+
+
+<!-- draw a box around an element/multiple element-->
+<!-- <div></div> -->
+
+<!-- draw a box within an element-->
+<!-- <span></span> -->
+
+<!-- sidebar -->
+<!-- <aside></aside> -->
+
+
+
+
+<!-- semantic elements-->
+
+<!-- article???? big central block of page-->
+<!-- <article></article> -->
+
+<!-- nav btwn multiple places -->
+<!-- <nav></nav> -->
+
+
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a class="active"href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  </body>
+</html>
