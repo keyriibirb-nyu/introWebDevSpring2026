@@ -1,0 +1,60 @@
+/* We always load our fonts and variables first! 
+then go from general --> specific */
+
+html, body{
+    margin:0;
+}
+
+/* generic style so we can see div elements and how they nest */
+div {
+    /* border shorthand: border-width border-style border-color  */
+    border:1px solid red;
+
+    padding: 10px;
+}
+
+/* absolute positioned elements w/o a posiitoned ancestor
+will be positioned in relation to the entire browser window */
+/* ignores other elements, other elements ignore it */
+.abs-no-parent{
+    background-color: cornflowerblue;
+    position: absolute;
+
+    top: 20%;
+    right: 100px;
+}
+
+
+.rel-parent{
+    background-color: lightcoral;
+    width: 50%;
+
+    /* height positions are a bit janky unless there's an ancestor w a set height */
+    /* vh: viewport height. so 100vh is 100% of viewpoint height. */
+    height: 200vh;
+
+    /* whenever you want to position smth absolutely inside another element, 
+    the parent element needs to be relative */
+    position: relative;
+}
+
+.abs-rel-parent{
+    background-color: rgb(194, 71, 71);
+    width: 200px;
+    height: 200px;
+    position:absolute; 
+
+    bottom: 10px;
+    right:0px;
+
+}
+
+header{
+    height:100px;
+    width:100%;
+    position:fixed;
+    background-color:aquamarine;
+
+    /* big numbers: put in front, small numbers: put in back*/
+    z-index: 10;
+}
