@@ -1,0 +1,74 @@
+/* always load custom fonts and other dependencies first 
+(other stylesheets, CSS variables) */
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+/* universal selector to rest some defaults */
+*{
+  margin:0;
+  padding:0;
+}
+
+
+/* to get full-size height and width image background */
+html{
+    /* background: url() repeat position-x position-y fixed */
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* apply default font styles to the body so all other elements can inherit them */
+body{
+    font-family: "Kaushan Script", cursive;
+    color: greenyellow;
+}
+
+.container{
+    width:900px;
+    margin:0 auto;
+
+    /* since the polaroid divs are going to display inline-block, 
+    we need to zero out the font size here on the parent element to avoid gaps */
+    font-size:0;
+
+}
+
+.polaroid{
+    width:260px;
+    margin:20px;
+    display: inline-block;
+
+    /* this is the parent element we want to put an abosulte positioned element in */
+    position: relative;
+
+}
+
+
+/* this looks for image tags in polaroid class parent */
+.polaroid img {
+
+    /* with images, usually width 100% of parent div, then size the parent div. */
+    width:100%;
+    /* auto: scale to fit. anti-squish */
+    height:auto;
+
+    border: 10px solid #CCC;
+    /* override to make border bottom width bigger, look like polaroids */
+    border-bottom-width: 45px;
+
+}
+
+
+.polaroid p{
+    /* to overlay font over photo: absolute */
+    position: absolute;
+ 
+
+    width:280px;
+    text-align:center;
+    bottom: 7px;
+    color: #333;
+    font-size: 1.5rem;
+
+}
