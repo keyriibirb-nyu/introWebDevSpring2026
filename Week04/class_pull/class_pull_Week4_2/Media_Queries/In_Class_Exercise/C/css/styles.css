@@ -1,0 +1,46 @@
+/* global styles first */
+
+/* this example, using desktop-first styling */
+/* default is desktop, override for mobile */
+
+
+* {
+    /* content box: 
+    content only is sized. 
+    padding, border, margin are all added on */
+
+    /* border box: 
+    content, padding, border included when sized. 
+    margin only is added on 
+    --> more control over size w/o crazy math */
+    box-sizing:border-box;
+}
+/* 
+#box_sizing_example{
+    width: 200px;
+    height: 200px;
+    border: 40px solid green;
+    background-color:greenyellow;
+
+} */
+
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* making images completely filling the container */
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* changing dimensions of the container to change image size */
+.thumb{
+    width: 25%;
+}
+
+
