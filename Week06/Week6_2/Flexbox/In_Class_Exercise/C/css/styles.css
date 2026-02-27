@@ -1,0 +1,174 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    /* scale to fill the width of the parent element */
+    width:100%;
+    /* preserves the aspect ratio */
+    height:auto;
+}
+
+/* flexbox simple row layouts */
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* some more properties so we can see our divs */
+    border: 1px solid purple;
+    background-color: rgba(255,0,255,0.3);
+    min-height: 400px;
+}
+
+.item{
+    border: 1px solid cornflowerblue;
+    background-color: rgba(0,0,255,0.3);
+    width: 23%;
+    height: 300px;
+}
+
+/* atomic CSS design pattern */
+
+/* centering horizontally and vertically */
+.center{
+    display: flex;
+
+    /* horizontal distribution */
+    justify-content: center;
+
+    /* vertical in row */
+    align-items: center;
+}
+
+
+
+
+/* CONTAINER CLASSES */
+/* JUSTIFY */
+.justify_start{
+    justify-content: flex-start;
+}
+
+.justify_end{
+    justify-content: flex-end;
+}
+
+.justify_between{
+    justify-content: space-between;
+}
+
+.justify_around{
+    justify-content: space-around;
+}
+
+.justify_even{
+    justify-content: space-evenly;
+}
+
+.justify_center{
+    justify-content: center;
+}
+
+/* ALIGN */
+
+
+
+.align_start{
+    align-items: flex-start;
+}
+
+.align_end{
+    align-items: flex-end;
+}
+
+.align_center{
+    align-items: center;
+}
+
+/* default */
+.align_stretch{
+    align-items: stretch;
+}
+
+.align_self_stretch{
+    align-items: stretch;
+    height: auto;
+}
+
+
+
+/* Classic layout example */
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 0 5%;
+    min-height: 100px;
+    background-color: aqua;
+}
+
+/* container for thumbnail grids */
+.wrapper{
+    display:flex;
+    flex-direction: row;
+}
+
+
+.grid_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    /* change justify content value and see the difference */
+    justify-content: flex-start;
+    align-items: center;
+    background-color: tomato;
+}
+
+.grid_item{
+    width:23%;
+    margin:1%;
+}
+
+
+.secondary_nav{
+    min-width: 25%;
+    background-color: chartreuse;
+}
+
+.menu{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.menu li{
+    border-bottom: 1px solid gray;
+}
+
+.menu span{
+    padding:1rem;
+    font-size: 2rem;
+}
+
+.menu a{
+    text-decoration: none;
+    /* 800 bold, 400 reg. so 600 is semi bold */
+    font-weight: 600;
+    color:#222;
+    width:100%;
+    display:flex;
+    align-items: center;
+
+
+}
