@@ -1,0 +1,461 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* will line items up in columns */
+.container_column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 1px solid cornflowerblue;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+/* Atomic CSS Design Pattern */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify_start {
+  justify-content: flex-start;
+}
+
+.justify_end {
+  justify-content: flex-end;
+}
+
+.justify_between {
+  justify-content: space-between;
+}
+
+.justify_around {
+  justify-content: space-around;
+}
+
+.justify_even {
+  justify-content: space-evenly;
+}
+
+.align_start {
+  align-items: flex-start;
+}
+
+.align_end {
+  align-items: flex-end;
+}
+
+.align_center {
+  align-items: center;
+}
+
+.self_start {
+  align-self: flex-start;
+}
+
+.self_end {
+  align-self: flex-end;
+}
+
+.self_center {
+  align-self: center;
+}
+
+.self_stretch {
+  align-self: stretch;
+  /* need to override our fixed height of 300px for our class item so it can stretch */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* if anything with flexbox and the value stretch
+  isn't "stretching" its because you have a fixed height or width */
+  .self-stretch {
+    /* need to override fixed width of 300px so it can stretch in column mode */
+    height: 300px;
+    width: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Classic Layout Example */
+
+header {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  background-color: #FFF;
+  align-items: center;
+}
+
+.header_img{
+  height: 133px;
+  width: auto;
+}
+
+header .text{
+  padding: 15px;
+  justify-items: flex-start;
+
+}
+
+/* Security */
+header h1 {
+  letter-spacing: -0.5px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: -7px;
+  font-size: 3em;
+  color: #000;
+}
+
+
+/* div for Snails.com */
+header div .sub_logo_div {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* Snails */
+header h2{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.5em;
+  color: #E40505;
+}
+
+/* .com */
+header h3{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.75em;
+  color: #8C8C8C;
+}
+  
+/* phone number */
+header p {
+  justify-self: flex-end;
+  vertical-align: middle;
+  font-size: 0.9em;
+  margin: 0;
+  color: #8C8C8C;
+}
+
+#home_header{
+  padding-left:300px;
+  height: 250px;
+  font-size: 1.4em;
+}
+
+#stacked_boxes{
+  width:300px;
+  height: auto;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+nav{
+  background-color: #8B0404;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  font-size: 0;
+}
+
+nav ul{
+  padding:0;
+  margin:0;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+nav li a {
+  margin: 10px 5px;
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color:#FFF;
+  text-decoration:none;
+      } 
+
+
+nav a:hover {
+  background-color: #ddd;
+  color: #C20102;
+}
+
+nav a.active {
+  background-color: #C20102;
+  color:#FFF ;
+}
+
+.slogan_bar{
+  padding:0;
+  background-image: linear-gradient(to right, #C20102, #450202);
+  height:150px;
+  width:100%;
+  display:inline-flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.slogan_bar p{
+  margin:0;
+  padding:15px;
+  align-self: center;
+  font-size: 3.5em;
+  color:#FFF;
+}
+
+.slogan_bar div{
+  width: 20%;
+  height:150px;
+  margin:0;
+  padding:0;
+}
+
+/* large label at the top of the page, page name and photo nav */
+.standard_page_bar{
+  background-image: linear-gradient(to right, #C20102, #450202);
+  padding:20px;
+}
+
+
+/* page name: ie "All Products" */
+.standard_page_bar h2{
+  color:#FFF;
+  margin:0;
+  padding:5px 0;
+}
+
+/* subtitle: "browse our most popular categories" */
+.standard_page_bar p{
+  color:#FFF;
+  margin: 0;
+  padding:5px 0;
+}
+
+
+.standard_page_bar ul{
+  list-style-type: none;
+  flex-wrap: nowrap;
+}
+
+
+.category_box{
+  padding:5%;
+  background-color: #FFF;
+  text-decoration: none;
+}
+
+.category_box .img_container{
+  min-width: 100px;
+  height:auto;
+}
+
+.category_box p{
+  text-wrap: nowrap;
+  color:#231918;
+  font-size: medium;
+}
+
+aside{
+  width: 20%;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+aside ul{
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+aside li a{
+  text-decoration: none;
+}
+
+/* wrapper for main: aside + article */
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* wrapper for article: icon bar + content */
+.wrapper_article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.icon_bar{
+  margin: 0;
+  padding:15px;
+  background-color: #FFF8F6;
+}
+
+.main_article{
+  background-image: linear-gradient(to bottom, #FFF8F6, #C20102);
+  padding:15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+content{
+  border-radius: 8px;
+  margin:10px;
+  padding:5px 10px;
+  height:100px;
+  background-color: #FFF8F6;
+}
+
+content p{
+  background-color: aqua;
+}
+
+footer{
+margin:0;
+padding:0;
+width:100%;
+height:200px;
+background-color: #450202;
+}
+
+footer p{
+  margin:0;
+  padding:0;
+  color:#FFF;
+}
+
+
+
+
+
+
+
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: darkcyan;
+}
+
+.grid-item {
+  width: 23%;
+  margin: 1%;
+}
+
+.secondary-nav {
+  min-width: 25%;
+  background-color: aquamarine;
+}
+
+.menu {
+  /* remove list defaults */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid grey;
+}
+
+.menu span {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .grid-item {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .secondary-nav {
+    order: 1;
+  }
+
+  .grid-container {
+    flex-direction: column;
+    order: 2;
+  }
+
+  .grid-item {
+    width: 95%;
+  }
+}
