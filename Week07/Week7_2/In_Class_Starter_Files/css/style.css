@@ -1,0 +1,197 @@
+/* GLOBAL STYLES */
+
+*{
+    box-sizing: border-box;   
+}
+
+/* zero-out margins */
+html,
+body{
+    margin: 0;
+}
+
+/* scale the images to fit their parent container */
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* Desktop-First Styling */
+/* JUMBOTRON */
+
+/* div with the class hero */
+div.hero{
+    /* vw viewport width */
+    width:100vw;
+
+    /* vh viewport height */
+    max-height: 100vh;
+
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero article{
+    position:absolute;
+    bottom: 10%;
+    right:0;
+    width: 50%;
+    padding: 2%;
+    background: linear-gradient(90deg, rgba(255,0,0,0.5) 0%,rgba(255,0,0,0) 100%);
+}
+
+button,
+a.info{
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color:white;
+    background-color: #333;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+    /* transitions get applied here at the base state of an element */
+    transition: all 1s ease;
+    width:10rem;
+
+}
+
+button:hover,
+a.info:hover{
+    background-color: chartreuse;
+    color: #333;
+    width: 10.5rem;
+}
+
+/* GALLERY */
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.thumb{
+    position: relative;
+    overflow: hidden;
+    /* grow shrink flex-basis */
+    /* 
+    flex-grow:0;    don't scale up
+    flex-shrink:0;  don't scale down
+    flex-basis: size and unit. setting default size
+     */
+    flex: 0 0 30%;
+
+    margin:1.5rem auto;
+}
+
+
+/* prepare the img initial state for transforms */
+/* parent element has .thumb, descendant is img */
+.thumb img {
+    transform: scale(1);
+    transform: rotate(0deg);
+    transition: all 1s ease;
+}
+
+
+/* image transforms on hover */
+.thumb:hover img{
+     transform: scale(1.5) rotate(-20deg);
+}
+
+
+
+
+.mask{
+    /* stretching mask to cover parent */
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    /* quick way to center in both axis */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 1s ease;
+    opacity:0;
+    background-color: rgba(255,255,255,0.5);
+
+    pointer-events: all;
+
+}
+
+.mask h2{
+    margin:0;
+}
+
+.mask p{
+    font-style: italic;
+}
+
+.thumb:hover .mask{
+    opacity: 1;
+
+}
+
+
+.thumb .mask h2,
+.thumb .mask p,
+.thumb .mask a{
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease;
+
+}
+
+.thumb:hover .mask h2,
+.thumb:hover .mask p,
+.thumb:hover .mask a{
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet Landscape */
+@media screen and (max-width: 1024px){
+    .hero article{
+        width: 80%;
+    }
+
+    .thumb{
+        flex-basis: 45%;
+    }
+}
+
+
+/* iPad classic portrait and smaller mobile */
+@media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+        padding: 0.75rem;
+    }
+    
+    .hero article{
+        width:100%;
+        bottom:1%;
+        padding:1.5rem;
+    }
+}
+
+
+
+
+
+
+
