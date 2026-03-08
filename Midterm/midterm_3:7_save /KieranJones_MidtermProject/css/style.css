@@ -15,6 +15,15 @@ img {
 
 
 
+
+
+
+
+
+
+
+
+
 /* ATOMIC EXAMPLES */
 /* will line items up in columns */
 .container_column {
@@ -115,6 +124,9 @@ img {
 
 
 
+
+
+
 /* HEADER BEGIN */
 header {
   display: flex;
@@ -124,24 +136,26 @@ header {
   align-items: center;
 }
 
+/* div for solo_box logo */
 .header_img{
-  height: 133px;
+  height: 8rem;
   width: auto;
 }
 
+/* container for logo text */
 header .text{
-  padding: 15px;
+  padding: 1rem;
   justify-items: flex-start;
 
 }
 
-/* Security */
+/* "Security" */
 header h1 {
   letter-spacing: -0.5px;
   text-align: center;
   vertical-align: middle;
   margin: 0;
-  margin-bottom: -7px;
+  margin-bottom: -0.5rem;
   font-size: 3em;
   color: #000;
 }
@@ -155,7 +169,7 @@ header div .sub_logo_div {
   align-items: baseline;
 }
 
-/* Snails */
+/* "Snails" */
 header h2{
   margin: 0;
   padding: 0;
@@ -165,7 +179,7 @@ header h2{
   color: #E40505;
 }
 
-/* .com */
+/* ".com" */
 header h3{
   margin: 0;
   padding: 0;
@@ -175,7 +189,7 @@ header h3{
   color: #8C8C8C;
 }
   
-/* phone number */
+/* phone number beneath logo */
 header p {
   justify-self: flex-end;
   vertical-align: middle;
@@ -184,7 +198,7 @@ header p {
   color: #8C8C8C;
 }
 
-/* header logo specifically for the home page */
+/* header logo text specifically for the home page */
 #home_header{
   width:100%;
   padding-left:20%;
@@ -201,6 +215,8 @@ header p {
   left:0;
 }
 
+
+/* NAV BEGIN */
 nav{
   background-color: #8B0404;
   display: flex;
@@ -209,22 +225,26 @@ nav{
   font-size: 0;
 }
 
+/* container for all pages within nav */
 nav ul{
   padding:0;
   margin:0;
 }
 
+/* one list item */
 nav li {
   display: inline-block;
-  font-size: 1rem;
 }
 
+/* anchor tag attached to list item */
 nav li a {
   margin: 10px 5px;
-  display: block;
-  text-align: center;
+  display: inline-block;
   padding: 5px 10px;
   border-radius: 8px;
+
+  text-align: center;
+  font-size: 1rem;
   color:#FFF;
   text-decoration:none;
       } 
@@ -239,7 +259,14 @@ nav a.active {
   background-color: #C20102;
   color:#FFF ;
 }
+/* NAV END */
 
+/* PAGE BAR BEGIN */
+/* between the nav and the body,
+like a second header for the category */
+
+/* Page bar for the home page -- has the slogan */
+/* "Don't be the easy target!" */
 .slogan_bar{
   padding:0;
   background-image: linear-gradient(to right, #C20102, #450202);
@@ -266,26 +293,31 @@ nav a.active {
   padding:0;
 }
 
-/* large label at the top of the page, page name and photo nav */
+/* Page bar for the products page */
+/* would also be used down the line for more products pages */
+/* ie Products > Door Locks would have a standard_page_bar with types of door locks */
 .standard_page_bar{
   background-image: linear-gradient(to right, #C20102, #450202);
   width:100%;
+  padding:2%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow:hidden;
+  justify-content:space-between;
 }
 
 /* holds standard_page_bar h2 and p */
 .standard_page_bar_header{
-  margin: 0 0 0 2%;
+  max-width:30%;
+  margin: 0 2%;
   padding:0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* page name: ie "All Products" */
+/* page name: "All Products" */
 .standard_page_bar h2{
   color:#FFF;
   margin:0;
@@ -300,48 +332,59 @@ nav a.active {
   text-wrap: wrap;
 }
 
+/* container for category link buttons */
 .standard_page_bar ul{
-  width:70%;
+  width:77%;
   padding:0;
   margin:0;
-  display: inline-flex;
+
+  display: flex;
   flex-direction: row;
   list-style-type: none;
+  justify-content: space-between;
 }
 
+/* container for one category link button */
 .category_box{
-  flex:0 0 18%;
-  width:20%;
+  max-height:12rem;
+  max-width:12rem;
   padding:2%;
   margin:1%;
-  max-height:12rem;
+
   background-color: #FFF;
   border-radius: 8px;
+
   display: flex;
   flex-direction: column;
+   /* keeping boxes the same size as each other */
+  flex:1 1 0;
+
 }
 
 .category_box a{
   height:100%;
   width:100%;
   text-decoration: none;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.img_container{
+.category_box .img_container{
   max-width: 100%;
   max-height:75%;
   width:auto;
   overflow: hidden;
+
   display: flex;
   justify-content: center;
 }
 
-.img_container img{
+.category_box .img_container img{
   height:100%;
   width:auto;
+  max-width: 100%;
 }
 
 
@@ -355,12 +398,13 @@ nav a.active {
 /* MAIN BEGIN */
 /* wrapper for main: aside + article */
 .wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 100%;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
@@ -383,6 +427,7 @@ aside ul{
 aside li{
   margin:0;
   padding: 1rem;
+
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -484,9 +529,13 @@ content{
 }
 
 
+
 content .img_container{
   height:100%;
   width: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 content p{
@@ -604,7 +653,7 @@ footer p{
 }
 
 .standard_page_bar ul{
-  width:93%;
+  min-width:100%;
 }
 
 .category_box{
