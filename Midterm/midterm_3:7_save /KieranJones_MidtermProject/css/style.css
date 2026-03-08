@@ -249,23 +249,32 @@ nav li a {
   text-decoration:none;
       } 
 
-
+/* change color when hover */
 nav a:hover {
   background-color: #EDEDED;
   color: #C20102;
 }
 
+/* change color when has class="active"
+(page user is currently on) */
 nav a.active {
   background-color: #C20102;
   color:#FFF ;
 }
 /* NAV END */
 
+
+
+
+
+
+
+
 /* PAGE BAR BEGIN */
 /* between the nav and the body,
 like a second header for the category */
 
-/* Page bar for the home page -- has the slogan */
+/* Page bar for the home page */
 /* "Don't be the easy target!" */
 .slogan_bar{
   padding:0;
