@@ -1,4 +1,4 @@
-A demo of the site and the progress you have made
+1. A demo of the site and the progress you have made
 
 
 
@@ -6,7 +6,7 @@ A demo of the site and the progress you have made
 
 
 
-A snippet of code you figured out (perhaps a tutorial you found or some responsive behavior you figured out)
+2. A snippet of code you figured out (perhaps a tutorial you found or some responsive behavior you figured out)
 
 
 Be sure to include at least one media query in your CSS for responsive behavior. If you are only picking one media query, make sure it is mobile (max-width: 768px). 
