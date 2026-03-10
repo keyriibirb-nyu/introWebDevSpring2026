@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>CSS Vars | Contact Us</title>
+    <style type="text/CSS">
+      /* Base styles */
+
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container{
+        width: 50%;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 0.5rem;
+
+
+        background-color: aquamarine;
+        color:#333;
+      }
+
+
+      .row{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+
+      .label_lg{
+        font-size: 2rem;
+      }
+
+
+      .input_lg{
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid gray;
+        margin-right: 2rem;
+      }
+
+
+
+
+      .message_area{
+        display:flex;
+        flex-direction: column;
+        margin-top:2rem;
+        font-size: 2rem;
+      }
+
+
+
+      .message{
+        height:16rem;
+        border-radius:0.25rem;
+        padding: 1rem;
+      }
+
+      .button_bar{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top:2rem;
+      }
+
+      .btn_dark{
+        width:100%;
+        border-radius: 0.5rem;
+        padding:1rem;
+        background-color: blueviolet;
+        color:white;
+        border:1px solid #333;
+      }
+
+      .btn_dark:hover{
+        background-color: purple;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+
+
+
+
+  <body>
+    <div class="container">
+
+      <h1>Get in Touch!</h1>
+
+      <form action="https://formspree.io/f/xjgaypjn" method="post">
+        <div class="row">
+          <label class="label_lg" for="name">Name:</label>
+          <input class="input_lg" name="name" type="text" required/>
+
+          <label class="label_lg" for="email">Email:</label>
+          <input class="input_lg" name="email" type="text" required/>
+        </div>
+
+
+        <div class="message_area">
+          <label class="label_lg" for="message">Leave me a message!</label>
+          <textarea class="message" name="message" placeholder="Leave a comment or question here..." required></textarea>
+        </div>
+
+
+        <div class="button_bar">
+          <button class="btn_dark" type="submit">Send</button>
+        </div>
+
+        <input type="hidden" name="subject" value="New Submission From: {{name}}"/>
+
+
+
+
+
+
+
+
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
