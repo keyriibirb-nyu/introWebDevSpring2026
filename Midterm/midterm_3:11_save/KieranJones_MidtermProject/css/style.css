@@ -1,0 +1,788 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+
+  /* https://www.codestudy.net/blog/maintaining-aspect-ratio-of-a-stretched-flex-item/ */
+  /* keeping images from distorting */
+  object-fit: contain;
+  object-position: center;
+}
+
+/* HEADER BEGIN */
+header {
+  display: flex;
+  width: 100%;
+  min-height: 6rem;
+  background-color: #FFF;
+  align-items: center;
+}
+
+/* div for solo_box logo */
+.header_img{
+  height: 8rem;
+  width: auto;
+}
+
+/* container for logo text */
+header .text{
+  padding: 1rem;
+  justify-items: flex-start;
+
+}
+
+/* "Security" */
+header h1 {
+  letter-spacing: -0.5px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: -0.5rem;
+  font-size: 3em;
+  color: #000;
+}
+
+
+/* div for Snails.com */
+header div .sub_logo_div {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* "Snails" */
+header h2{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.5em;
+  color: #E40505;
+}
+
+/* ".com" */
+header h3{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.75em;
+  color: #8C8C8C;
+}
+  
+/* phone number beneath logo */
+header p {
+  justify-self: flex-end;
+  vertical-align: middle;
+  font-size: 0.9em;
+  margin: 0;
+  color: #8C8C8C;
+}
+
+/* header logo text specifically for the home page */
+#home_header{
+  width:100%;
+  padding-left:250px;
+  height: 15rem;
+  font-size: 1.4em;
+}
+
+/* fancy stacked boxes logo for the home page */
+#stacked_boxes{
+  /* using pixels bc stacked boxes need to sit within the slogan_bar */
+  /* will use media queries to change rather than percentages or rem */
+  width:250px;
+  height: auto;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#mobile_box{
+  display:none;
+}
+
+
+
+/* NAV BEGIN */
+
+/* hiding mobile hamburger icon on desktop */
+.mobile_menu{
+  display: none;
+}
+/* hiding nav as well */
+.mobile_nav{
+  display:none;
+}
+
+
+nav{
+  background-color: #8B0404;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  font-size: 0;
+}
+
+/* container for all pages within nav */
+nav ul{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  padding:0;
+  margin:0;
+}
+
+/* one list item */
+nav li {
+  display: inline-block;
+}
+
+/* anchor tag attached to list item */
+nav li a {
+  margin: 10px 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+
+  text-align: center;
+  font-size: 1rem;
+  color:#FFF;
+  text-decoration:none;
+      } 
+
+/* change color when hover */
+nav a:hover {
+  background-color: #EDEDED;
+  color: #C20102;
+}
+
+/* change color when has class="active"
+(page user is currently on) */
+nav a.active {
+  background-color: #C20102;
+  color:#FFF ;
+}
+/* NAV END */
+
+
+
+
+
+
+
+
+/* PAGE BAR BEGIN */
+/* between the nav and the body,
+like a second header for the category */
+
+/* Page bar for the home page */
+/* "Don't be the easy target!" */
+.slogan_bar{
+  padding:0;
+  background-image: linear-gradient(to right, #C20102, #450202);
+  height:10rem;
+  width:100%;
+  display:inline-flex;
+  align-content: center;
+  justify-content:center;
+}
+
+.slogan_bar p{
+  margin:0;
+  padding:0;
+  align-self: center;
+  font-size: 3.5em;
+  text-wrap:nowrap;
+  color:#FFF;
+}
+
+/* Page bar for the products page */
+/* would also be used down the line for more products pages */
+/* ie Products > Door Locks would have a standard_page_bar with types of door locks */
+.standard_page_bar{
+  background-image: linear-gradient(to right, #C20102, #450202);
+  width:100%;
+  padding:2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow:hidden;
+  justify-content:space-between;
+}
+
+/* holds standard_page_bar h2 and p */
+.standard_page_bar_header{
+  max-width:30%;
+  margin: 0 2%;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* page name: "All Products" */
+.standard_page_bar h2{
+  color:#FFF;
+  margin:0;
+  padding:1% 0;
+}
+
+/* subtitle: "browse our most popular categories" */
+.standard_page_bar p{
+  color:#FFF;
+  margin: 2% 0;
+  padding: 0;
+  text-wrap: wrap;
+}
+
+/* container for category link buttons */
+.standard_page_bar ul{
+  width:77%;
+  padding:0;
+  margin:0;
+
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+/* container for one category link button */
+.category_box{
+  max-height:12rem;
+  max-width:12rem;
+  padding:0;
+  margin:1%;
+
+  background-color: #FFF;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+   /* keeping boxes the same size as each other */
+  flex:1 1 0;
+
+}
+
+.category_box a{
+  height:100%;
+  width:100%;
+  padding:10%;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img_container{
+  max-height:75%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+}
+
+.category_box p{
+  color:#231918;
+  font-size: medium;
+}
+/* HEADER END */
+
+
+
+
+/* MAIN BEGIN */
+/* wrapper for main: aside + article */
+.wrapper{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+/* ASIDE BEGIN */
+aside{
+  margin: 1rem 0 1rem 1rem;
+  background-color: #FFF;
+}
+
+aside ul{
+  margin:0.5rem;
+  padding:0;
+  list-style-type: none;
+}
+
+/* container for li a and dropdown */
+aside li{
+  margin:0;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+aside li a{
+  text-decoration: none;
+  color:#000;
+  text-wrap: wrap;
+}
+
+/* dropdown arrow code based on w3schools 
+https://www.w3schools.com/Css/css_dropdowns.asp */
+.dropdown {
+  position: relative;
+}
+
+/* Style the dropdown button */
+.dropdown_button {
+  background-color: #FFF;
+  color: black;
+  margin:1%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #FFF;
+  width: 12rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Links inside dropdown content */
+.dropdown_content a {
+  color: black;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_content a:hover {
+  background-color: #EDEDED;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+/* ASIDE END */
+
+
+
+/* ARTICLE BEGIN */
+/* wrapper for article: icon bar + content */
+.wrapper_article{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.icon_bar{
+  display: inline-flex;
+  margin: 0;
+  padding:1rem;
+  padding-bottom: 0;
+  background-color: #FFF8F6;
+}
+
+.search_bar{
+  width:60%;
+  height:2.2rem;
+  padding:0;
+  margin:1%;
+
+  border-color: #857370;
+  border-width:1px;
+  border-style: solid;
+  border-radius: 0.5rem;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* based on W3 schools */
+/* https://www.w3schools.com/howto/howto_css_searchbar.asp */
+.search_bar input[type=text]{
+  width:92%;
+  padding:1%;
+  margin:0;
+
+  font-size: 1rem;
+  color:#231918;
+
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border:none;
+}
+
+.search_bar button{
+  width:8%;
+  height:2rem;
+  padding: 6px 10px;
+  margin:0;
+
+  font-size: 1rem;
+  color:#231918;
+  background-color: #FFF;
+
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.search_bar button:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+/* hold 'my cart' and 'profile' buttons*/
+.cart_profile_container{
+  width:40%;
+  margin:0.6%;
+  color: #1F0000;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.cart_profile_container a{
+width:30%;
+padding:3%;
+margin:1%;
+
+background-color: #FFF;
+border-color: #857370;
+border-width:1px;
+border-style: solid;
+border-radius: 0.5rem;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cart_profile_container i{
+  font-size: 1.5rem;
+  color:#231918;
+}
+
+.cart_profile_container p{
+  margin:0;
+  padding:0;
+  padding-top:5%;
+
+  font-size: 1rem;
+  text-wrap: nowrap;
+  color:#231918;
+}
+
+.cart_profile_container a:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* container for headers and content */
+.main_article{
+  /* filling space between header and footer, height:100% */
+  height:100%;
+  background-image: linear-gradient(to bottom, #FFF8F6, #C20102);
+  padding:1rem;
+  padding-top:0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* headers */
+/* "Our specialized services" */
+.header_and_desc{
+  padding:0;
+  margin:0.5rem;
+}
+
+.header_and_desc h2,
+.header_and_desc p{
+  padding:0;
+  margin:0.75rem;
+}
+
+/* for rows of modules within the information columns */
+.information_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* content boxes */
+/* content_img and header, paragraph, links */
+content{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  margin:1rem;
+  padding:1rem;
+  height:8rem;
+  background-color: #FFF;
+}
+
+.information_container content{
+  width:20%;
+}
+
+/* container for things inside content boxes */
+/* content inside "content" divs besides images */
+.content_text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin:0;
+  padding: 1%;
+  min-width:45%;
+  max-width:85%;
+}
+
+.content_text h3,
+.content_text p{
+  margin:0;
+  padding:1%;
+}
+
+.main_article .information{
+  margin:0;
+  padding:0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.information_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  width:100%;
+}
+
+.information_container content{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.information_container i{
+  font-size:1.5rem;
+  margin:0;
+  padding:0;
+  padding-bottom: 3%;
+}
+
+/* ARTICLE END */
+/* MAIN END */
+
+
+
+
+/* FOOTER BEGIN */
+footer{
+margin:0;
+padding:0;
+width:100%;
+height:12rem;
+background-color: #450202;
+}
+
+footer p{
+  margin:0;
+  padding:0;
+  color:#FFF;
+}
+/* FOOTER END */
+
+
+
+
+/* DESKTOP-FIRST STYLING */
+/* MEDIA QUERIES */
+
+/* Landscape tablet */
+@media screen and (max-width:1024px){
+
+
+/* home page: stacked_boxes logo
+ sitting on nav rather than slogan_bar */
+#home_header{
+  padding-left: 200px;
+}
+
+#stacked_boxes{
+  width:200px;
+}
+
+
+/* changing standard_page_bar from row to column */
+.standard_page_bar{
+  margin:0;
+  padding:1%;
+  flex-direction: column;
+}
+
+.standard_page_bar_header{
+  margin: 0 0 0 2%;
+}
+
+.standard_page_bar h2{
+  margin:0;
+  padding:1% 0;
+}
+
+.standard_page_bar p{
+  margin: 0 0 2% 0;
+}
+
+.standard_page_bar ul{
+  min-width:100%;
+}
+}
+
+
+
+/* Portrait tablet and smaller */
+@media screen and (max-width:768px){
+
+/* home page: switching stacked_boxes logo to solo_box logo */
+#home_header{
+  padding-left:1rem;
+}
+
+#stacked_boxes{
+  display:none;
+}
+
+#mobile_box{
+  display: block;
+  width:12rem;
+  height:auto;
+}
+
+/* hiding desktop_nav */
+.desktop_nav{
+  display:none;
+}
+
+
+/* putting mobile_nav in place of desktop_nav */
+.mobile_nav{
+  display:flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: flex-end;
+  padding:0;
+  background-color: rgba(0,0,0,0);
+}
+
+/* showing + formatting hamburger menu */
+.mobile_menu_container{
+  display:flex;
+  justify-content: end;
+  width:100%;
+  padding-right:2%;
+  background-color: #8B0404;
+}
+
+/* hamburger */
+.mobile_menu{
+  display:block;
+  color: #FFF;
+  font-size: 3rem;
+}
+
+/* NAV DROPDOWN */
+.mobile_nav_dropdown{
+  display:none;
+}
+
+.show{
+  display:block;
+}
+
+
+.mobile_nav_dropdown ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right:0;
+  background-color:  #450202;
+  width: 12rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+.slogan_bar{
+  height:5rem;
+}
+
+/* remove slogan */
+.slogan_bar p{
+  display: none;
+}
+
+
+main {
+  margin:0;
+  background-color: orange;
+}
+
+aside{
+  display:none;
+}
+
+}
+
+

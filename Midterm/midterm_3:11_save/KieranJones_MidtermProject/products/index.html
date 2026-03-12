@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+    <title>Security Snails - Products</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/b669e7c96c.js" crossorigin="anonymous"></script>
+
+    <!-- hamburger toggle js -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function(){
+         var hamburger = document.getElementById('mobile_menu')
+         hamburger.addEventListener('click',toggleShow)
+      })
+
+      function toggleShow(){
+        var menu = document.getElementById('mobile_nav_dropdown') 
+        menu.classList.toggle('show');
+      }
+    </script>
+</head>
+
+<body>
+     <header>
+        <div class="header_img">
+            <img src="../img/solo_box.png" alt="SS Logo">
+        </div>
+        <div class="text">
+            <h1>Security</h1>
+            <div class="sub_logo_div">
+                <h2>Snails</h2>
+                <h3>.com</h3>
+            </div>
+            <p>+1 876 543 2109</p>
+        </div>
+        
+    </header>
+
+       <nav class="desktop_nav">
+        <ul>
+             <li><a href="../Index.html">Home</a></li>
+             <li><a class="active" href="../products/index.html">Products</a></li>
+             <li><a href="../information/index.html">Information</a></li>
+             <li><a href="../contact/index.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- mobile nav is hidden until w<=768px -->
+    <nav class="mobile_nav">
+         <!-- hamburger icon -->
+        <div class="mobile_menu_container">
+            <span id="mobile_menu" class="mobile_menu">&#8801;</span>
+        </div>
+         
+         <div id="mobile_nav_dropdown" class="mobile_nav_dropdown">
+            <ul>
+                <li><a href="../Index.html">Home</a></li>
+                <li><a class="active" href="../products/index.html">Products</a></li>
+                <li><a href="../information/index.html">Information</a></li>
+                <li><a href="../contact/index.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- container div for standard_page_bar -->
+    <article class="standard_page_bar">
+
+
+        <!-- div that holds page_bar text -->
+        <div class="standard_page_bar_header">
+        <h2>All Products</h2>
+        <p>Browse our most popular categories:</p>
+        </div>
+
+        <!-- ul holds all boxes -->
+        <ul>
+            <li class="category_box">
+                <a href="#">
+                    <div class="img_container">
+                        <img src="../img/door_lock.jpg" alt="category photo"/>
+                    </div>
+                    <p><strong>Door Locks</strong></p>
+                </a>
+            </li>
+            <li class="category_box">
+                <a href="#">
+                    <div class="img_container">
+                        <img src="../img/retrofit_cylinder.jpg" alt="Retrofit cylinder"/>
+                    </div>
+                    <p><strong>Retrofit Locks</strong></p>
+                    
+                </a>
+            </li>
+            <li class="category_box">
+                <a href="#">
+                    <div class="img_container">
+                        <img src="../img/silver_padlock.jpg" alt="Padlock"/>
+                    </div>
+                    <p><strong>Padlocks</strong></p>
+                </a>
+            </li>
+            <li class="category_box">
+                <a href="#">
+                    <div class="img_container">
+                        <img src="../img/push_button_furniture_lock.jpg" alt="Push button lock"/>
+                    </div>
+                    <p><strong>Furniture Locks</strong></p>
+                </a>
+            </li>
+            <li class="category_box">
+                <a href="#">
+                    <div class="img_container">
+                        <img src="../img/accessories_evva_keys.jpg" alt="Three EVVA-brand keys"/>
+                    </div>
+                    <p><strong>Accessories</strong></p>
+                </a>
+            </li>
+            
+        </ul>
+
+    </article>
+        
+<!-- ASIDE BEGIN -->
+<!-- both sidebar and content -->
+<main class="wrapper">
+    <!-- sidebar -->
+    <aside>
+        <!-- Category label -->
+        <h3>Products</h3>
+        <p>Click on a category to browse:</p>
+        <!-- Menu with links, dropdown arrows -->
+        <ul>
+            <li>
+                <a href="#"><strong>Door Locks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Retrofit Locks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Padlocks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Device/Furniture Locks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Collector Locks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>European Locks</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Miscellaneous</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Accessories</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- Category label -->
+        <h3>Search by Manufacturer</h3>
+        <p>Click on a category to browse:</p>
+        <!-- Menu with links, dropdown arrows -->
+        <ul>
+            <li>
+                <a href="#"><strong>Abloy</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>ABUS</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>BiLock</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>EVVA</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#"><strong>Other</strong></a>
+                <div class="dropdown">
+                    <button class="dropdown_button">&#9658</button>
+                    <div class="dropdown_content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <!-- ASIDE END -->
+
+
+    <!-- icon and main article container -->
+    <div class="wrapper_article">
+    <article class="icon_bar">
+        <div class="search_bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="cart_profile_container">
+            <a class="shopping_cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>My Cart</p>
+            </a>
+            <a class="profile">
+                <i class="fa-solid fa-user-lock"></i>
+                <p>Profile</p>
+            </a>
+        </div>
+    </article>
+    <!-- article with content boxes inside -->
+    <article class="main_article">
+        <h2>Category</h2>
+        <content>
+            <p>text inside box</p>
+        </content>
+        <content>
+            <p>text inside box</p>
+        </content>
+        <content>
+            <p>text inside box</p>
+        </content>
+        <h2>Category</h2>
+        <content>
+            <p>text inside box</p>
+        </content>
+        <content>
+            <p>text inside box</p>
+        </content>
+        <content>
+            <p>text inside box</p>
+        </content>
+    </article>
+    </div>
+</main>
+
+<footer>
+    <p>footer text</p>
+</footer>
+    
+  
+</body>
+
+</html>
