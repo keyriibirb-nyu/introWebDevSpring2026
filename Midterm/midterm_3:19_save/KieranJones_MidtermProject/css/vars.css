@@ -1,0 +1,51 @@
+  /* FONTS */
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+
+      /* CSS variables */
+      /* usually in a file called global.css or variables.css */
+
+      /* CSS vars default */
+      :root {
+        --c-bg: #FFF;
+        --c-text-pri: #000;
+        --c-text-sec: #8C8C8C; 
+        --c-text-ter: #FFF; 
+
+        --c-surface: #FFF8F6;
+        --c-pri: #E40505;
+        --c-sec: #C20102;
+        --c-ter: #8B0404;
+
+        --c-bg-footer: #450202;
+
+        --c-border: #857370;
+        --c-hover: #EDEDED;
+
+
+
+        --c-bg-btn:#1e293b;
+      
+        --c-btn-text: #f8fafc;
+
+        --ff-heading: "Press Start 2P", system-ui;
+        --ff-body: "Share Tech Mono", monospace;
+      }
+
+
+      /* different color themes by body id */
+      #green{
+        --c-bg: #a7f3d0;
+        --c-text: #065f46;
+        --c-bg-btn:#059669;
+        --c-bg-btn-hover: #065f46;
+        --c-btn-text: #ecfdf5;
+      }
+
+      #blue{
+        --c-bg: #1e3a8a;
+        --c-text: #dbeafe;
+        --c-bg-btn:#3b82f6;
+        --c-bg-btn-hover: #1d4ed8;
+        --c-btn-text: #eff6ff;
+      }
