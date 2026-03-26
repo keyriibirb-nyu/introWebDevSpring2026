@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array Methods</title>
+    <script>
+      // Your JavaScript here
+
+
+      var months = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+    ]
+
+    //how many items are in array
+    console.log(months.length)
+
+    //array.pop() removes last item from array, returns value of the item
+    //const = variable won't change
+    const lastMonth = months.pop()
+    //array.push() adds an item to the end of the array
+    months.push(lastMonth)
+
+
+    for(var i = 0; i < months.length; i++){
+      console.log(`Month number ${i + 1} is ${months[i]}`)
+    }
+
+    //let is an empty variable, will be filled or changed later
+    let backMonths = []
+    for (var i = months.length; i > 0 ; i--){
+      const delMonth = months.pop()
+      backMonths.push(delMonth)
+      console.log(`deleted: ${delMonth} and added it to our backwards array.
+      months.length is now ${months.length}`)
+    }
+
+
+    console.log(months, backMonths)
+
+    //random number between 0 and array length
+    const rn = Math.floor(Math.random() * backMonths.length)
+
+    console.log(`random month is ${backMonths[rn]}`)
+
+
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Random Content</title>
+    <script>
+      // Your JavaScript here
+
+
+      // makle an array of image sources to choose from at random when the page loads
+      var arrImg=[
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F97533%2Fpexels-photo-97533.jpeg%3Fcs%3Dsrgb%26dl%3Danimal-avian-bird-97533.jpg%26fm%3Djpg&f=1&nofb=1&ipt=1f8b60a05314b8475d1b3e3ebf0daa8093d77354a386ad7f15fc0ba47bb1b9de',
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhdqwalls.com%2Fwallpapers%2Fcolorful-parrot-bird.jpg&f=1&nofb=1&ipt=d0ba1b396d52156271104f21575beb97036acc55d64860623e3ab7e8b16253d3',
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp9079313.jpg&f=1&nofb=1&ipt=3ce2e112a866e220238e0f9d809bebe939645b6e67aa5c9caccc5871255ee26f',
+      ]
+
+      //random links to correspond to each image
+      var arrLinks= [
+        'https://www.pexels.com/search/birds/',
+        'https://en.galaxys25userguide.com',
+        'https://wallpapercave.com/green-cheeked-conures-wallpapers'
+      ]
+
+      //helper funct - random num between 0 and max
+      function randomIndex(max){
+        return Math.floor(Math.random() * max)
+      }
+
+      //write our own image funct outside of event listeners
+      //remember to not call this funct until dom content loads
+
+      function loadRandomImage(){
+        var index = randomIndex(arrImg.length)
+        var img = document.getElementById('animal')
+        var link = document.getElementById('dynLink')
+
+        //assign the src attribute of the image element to a string stored in a random index slot
+        img.src = arrImg[index]
+        link.href = arrLinks[index]
+      }
+
+
+      //wait for the page to load before calling any functions that need html
+      document.addEventListener('DOMContentLoaded',loadRandomImage)
+      //when DOMContentLoaded = true, then loadRandomImage funct
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <a href="#" id="dynLink" target="_blank">
+      <img src="" id="animal"/>
+    </a>
+
+
+
+  </body>
+</html>

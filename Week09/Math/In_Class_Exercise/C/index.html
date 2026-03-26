@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Math Methods</title>
+    <script>
+      
+
+
+      //basic math in js -- same as p5js which makes sense lol
+      var x = 15
+      var y = 35
+      var z //can declare w/o assigning value
+
+      //basic operations
+      console.log(x + y)
+      //x-y x*y x/y
+      //x%y division remainder
+
+      //increment by 1
+      x++
+      x--
+      //increment by smth other than 1
+      x += 3
+      x -= 3
+      //order of operations does matter
+
+
+      //floats (floating point numbers)
+      var k = 2.25
+
+      //Math.floor = round down
+      var kDown = Math.floor(k)
+      //Math.ceil(ing) = round up
+      var kUp = Math.ceil(k)
+      //Math.round = rounds conventionally
+      var kRound = Math.round(k)
+      console.log('kDown', kDown, 'kUp', kUp, 'kRound', kRound)
+
+
+      //Math.random() does not receive any arguments,
+      //generates random floating pt number between 0 and 1
+      console.log(Math.random())
+
+
+      //rounds random number to 0 or 1, functionally random true/false
+      var yn = Math.round(Math.random())
+      console.log(yn)
+
+      if(yn === 0){
+        console.log(false)
+      } else{
+        console.log(true)
+      }
+
+
+      //random number between 0 and n
+      function randNum(n){
+        // the varible n is scoped, the same is for parameters
+        // lives inside the function, can't reference outside of the function
+
+        var rn = Math.round(n * Math.random());
+        console.log(rn)
+      }
+
+      randNum(9)
+
+
+
+      //random number between min and max
+      function randNumRange(min, max){
+        var rn = Math.round(Math.random() * (max-min) + min)
+        return rn //return outputs a value that can be used elsewhere
+      }
+
+      var randNumRangeVar = randNumRange(10,20)
+      console.log(randNumRangeVar)
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>
