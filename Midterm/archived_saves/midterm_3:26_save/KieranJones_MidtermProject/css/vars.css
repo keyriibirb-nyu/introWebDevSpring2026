@@ -1,0 +1,41 @@
+  /* FONTS */
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+
+
+      /* CSS variables */
+      /* usually in a file called global.css or variables.css */
+
+      /* CSS vars default */
+      :root {
+        --c-bg: #FFF;
+        --c-text-pri: #000;
+        --c-text-sec: #8C8C8C; 
+        --c-text-ter: #FFF; 
+
+        --c-surface: #FFF8F6;
+        --c-pri: #E40505;
+        --c-sec: #C20102;
+        --c-ter: #8B0404;
+        --c-qua: #450202;
+
+        --c-border: #857370;
+        --c-hover: #EDEDED;
+
+
+
+        --c-bg-btn:#1e293b;
+      
+        --c-btn-text: #f8fafc;
+
+
+        /* GRADIENTS */
+        --c-gradient-sec-to-qua: linear-gradient(to right, var(--c-sec), var(--c-qua));
+        --c-gradient-surface-to-sec: linear-gradient(to bottom, var(--c-surface), var(--c-sec));
+
+
+        --ff-heading: "Press Start 2P", system-ui;
+        --ff-body: "Share Tech Mono", monospace;
+
+
+
+      }
