@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fetch | Async | Await</title>
     <!-- Today we are going to hit 2 different API endpoints and dynamically insert HTML -->
-    <!-- Rick and Morty Character Stats, change characer index to select (random) -->
+    <!-- Rick and Morty Character Stats, change character index to select (random) -->
     <!-- https://rickandmortyapi.com/api/character/1 -->
     <!-- Random Quote API Endpoint -->
     <!-- https://quote-garden.onrender.com/api/v3/quotes/random -->
@@ -48,12 +48,11 @@
         // .ok = a boolean we can use to check !response.ok means we should throw an erorr or backup message
         // .blob() - great for fetching an image file
 
-        // More template literals to spit out a human readble sentence
+        // More template literals to spit out a human readable sentence
         const message = `${result.name} is a ${result.species} from ${result.origin.name}, and they are ${result.status}`
         console.log(message)
       }
 
-      //  don't forget to call it!
       logApiResults()
     </script>
     <style type="text/css">
@@ -75,7 +74,7 @@
         padding: 2rem;
         border-radius: 1rem;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-        /* from Oribton font documentation */
+        /* from Orbitron font documentation */
         font-family: 'Orbitron', sans-serif;
       }
 
@@ -84,12 +83,9 @@
         width: 50%;
         margin: 0 auto;
       }
-
-      /*Add Table Styles here*/
     </style>
   </head>
   <body>
-    <!--  -->
     <div id="card">
       <h3 id="characterName"></h3>
       <table id="charInfo"></table>
