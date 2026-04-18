@@ -1,0 +1,22 @@
+/* CSS variables */
+
+:root {
+  /* COLORS */
+
+  /* test */
+  --c-bg: #000;
+  --c-shadow-2: rgba(0,0,0,0.2);
+  --c-glow-2: rgba(255,255,255,0.2);
+  --c-glow-4: rgba(255,255,255,0.4);
+
+
+
+  --c-text-pri: #FFF;
+  --c-text-ter: #000;
+
+
+
+
+
+
+ }
