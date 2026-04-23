@@ -1,0 +1,56 @@
+/* CSS variables */
+
+:root {
+  /* COLORS */
+
+  /* base */
+  --c-bg: #000;
+  --c-onbg: rgb(75,75,75);
+  --c-shadow-2: rgba(0,0,0,0.2);
+  --c-glow-2: rgba(255,255,255,0.2);
+  --c-glow-4: rgba(255,255,255,0.4);
+
+
+  /* t1: red */
+  --c-t1-dark: rgb(150, 25, 0);
+  --c-t1-med: rgb(200, 32, 0);
+  --c-t1-light: rgb(255, 225, 225);
+  /* --c-text-t1-dark: rgb(25,0,0);
+  --c-text-t1-light: rgb(255, 225, 225); */
+
+  /* t2: gold-ish */
+  --c-t2-dark: rgb(125, 75, 0);
+  --c-t2-med: rgb(175, 125, 0);
+  --c-t2-light: rgb(255, 255, 225);
+
+  /* t3: green */
+  --c-t3-dark: rgb(25, 100, 25);
+  --c-t3-med: rgb(50, 150, 50);
+  --c-t3-light: rgb(225, 255, 225);
+
+  /* t4: blue */
+  --c-t4-dark: rgb(50, 50, 150);
+  --c-t4-med: rgb(100, 100, 200);
+  --c-t4-light: rgb(225, 225, 255);
+
+
+  /* t5: purple */
+  --c-t5-dark: rgb(125, 0, 150);
+  --c-t5-med: rgb(175, 50, 200);
+  --c-t5-light: rgb(255, 225, 255);
+
+
+
+
+  --c-text-pri: #FFF;
+  --c-text-sec: rgba(255,255,255,0.5);
+  --c-text-ter: #000;
+
+
+
+
+
+
+
+
+ }
