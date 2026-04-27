@@ -1,0 +1,482 @@
+@import url('vars.css');
+
+/* style.css BEGIN */
+/* ------------------------------------------------------------------------------------------ */
+/* GLOBAL STYLES BEGIN */
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--c-bg);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+/* GLOBAL STYLES END */
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* laptop-first styling (1440px) */
+
+
+/* “Surf's up blur” by Robert D'Arcy
+https://openprocessing.org/sketch/854271
+License CreativeCommons Attribution ShareAlike
+https://creativecommons.org/licenses/by-sa/3.0 */
+
+
+
+/* BIG DIV for header */
+.home_header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin:0;
+    padding:0;
+
+    background-color: unset;
+    height:100vh;
+    position:relative;
+    overflow: hidden;
+}
+
+.blur_bg{
+    position: absolute;
+    width:100%;
+}
+
+.blue_bg > iframe{
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+iframe{
+    border:none;
+    width:100%;
+    height:100vh;
+}
+
+
+/* container for name, subtitle in header */
+.header_text{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:4%;
+    z-index:1;
+}
+
+.header_text a{
+    text-decoration: none;
+    color: var(--c-t2-dark);
+}
+
+/* Kieran Jones (big letters) */
+.name_logo{
+    text-align: center;
+    font-family: "Bitcount Grid Double", 'Courier New', Courier, monospace;
+    padding:0;
+    margin:0;
+    font-size:8vh;
+}
+
+
+
+/* subtitle under big name */
+header h3{
+    text-align: center;
+    padding:0;
+    margin:0;
+    margin-top:0.5%;
+
+    letter-spacing: 2px;
+    font-size:2.5vh;
+    font-weight:lighter;
+    font-style: italic;
+}
+
+/* HOME_NAV START */
+.home_nav{
+    position: absolute;
+    bottom:0%;
+    width:100%;
+
+}
+
+.home_nav ul{
+    width:100%;
+    height:100%;
+
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.home_nav li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+    height:100%;
+
+    margin:0 2% 0 2%;
+    padding:0;
+}
+
+
+.home_nav li a{
+    width:100%;
+    padding:1rem;
+    text-decoration: none;
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--c-sat-yel-2);
+    color: var(--c-t2-dark);
+}
+
+.home_nav li a:hover{
+    background-color:var(--c-sat-yel-4);
+}
+/* HOME_NAV END */
+
+
+
+
+
+/* HEADER AND NAV at the top of the page (besides home section) */
+/* header */
+.mini_header{
+    position:fixed;
+    top:0;
+    left:0;
+
+    height:10vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+
+    background-color: unset;
+    
+    
+}
+
+.mini_header > .header_text{
+    /* width:100%; */
+    position: unset;
+    margin:0;
+    padding:0;
+    padding-left:3%;
+}
+
+.mini_header > .header_text > a >  h1 {
+    font-size: 3em;
+}
+
+/* unlike home_nav, mini_nav is inside of its header */
+/* MINI-NAV START */
+.mini_nav{
+    width: 50%;
+    position: unset;
+    padding-right:3%;
+    z-index:1;
+}
+
+.mini_nav ul{
+    width:100%;
+    height:100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin:0;
+
+    padding:0;
+    list-style-type: none;
+}
+
+.mini_nav li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:40%;
+    height:100%;
+
+    margin:0 2% 0 2%;
+    padding:0;
+}
+/* MINI-NAV END */
+
+
+.mini_nav li a{
+    width:100%;
+    padding:5%;
+    text-decoration: none;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--c-glow-2);
+    color: var(--c-t2-dark);
+}
+
+.mini_nav li a:hover{
+    background-color:var(--c-glow-4);
+}
+
+
+
+
+
+
+
+.wrapper{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.tabs{
+    height:90%;
+    width:5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.tabs ul{
+    width:50%;
+    height:100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.tabs li{
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+    padding:0;
+    height:20%;
+
+}
+
+.tabs a{
+    writing-mode: sideways-lr;
+    text-orientation: sideways;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    padding:1rem;
+    /* background-color: brown;
+    color:var(--c-text-pri); */
+    border-radius: 1rem 0 0 1rem;
+
+}
+
+
+/* .tabs a:hover{
+    background-color: var(--c-t1-light);
+    color:var(--c-text-ter);
+} */
+
+
+
+/* colors for the tabs and articles */
+/* 1 = RED */
+#tab1 {
+    background-color: var(--c-t1-light);
+    color: var(--c-t1-dark);
+}
+
+#tab1:hover {
+    background-color: var(--c-t1-med);
+    color: var(--c-text-ter);
+}
+
+#intro1 a {
+    background-color: var(--c-t1-light);
+    color: var(--c-t1-dark);
+}
+
+/* 2 = YELLOW */
+#tab2 {
+    background-color: var(--c-t2-light);
+    color: var(--c-t2-dark);
+}
+
+#tab2:hover {
+    background-color: var(--c-t2-med);
+    color: var(--c-text-ter);
+}
+
+#intro2 a {
+    background-color: var(--c-t2-light);
+    color: var(--c-t2-dark);
+}
+
+/* 3 = GREEN */
+#tab3 {
+    background-color: var(--c-t3-light);
+    color: var(--c-t3-dark);
+}
+
+#tab3:hover {
+    background-color: var(--c-t3-med);
+    color: var(--c-text-ter);
+}
+
+#intro3 a {
+    background-color: var(--c-t3-light);
+    color: var(--c-t3-dark);
+}
+
+
+/* 4 = BLUE */
+#tab4 {
+    background-color: var(--c-t4-light);
+    color: var(--c-t4-dark);
+}
+
+#tab4:hover {
+    background-color: var(--c-t4-med);
+    color: var(--c-text-ter);
+}
+
+#intro4 a {
+    background-color: var(--c-t4-light);
+    color: var(--c-t4-dark);
+}
+
+/* 5 = PURPLE */
+#tab5 {
+    background-color: var(--c-t5-light);
+    color: var(--c-t5-dark);
+}
+
+#tab5:hover {
+    background-color: var(--c-t5-med);
+    color: var(--c-text-ter);
+}
+
+#intro5 a {
+    background-color: var(--c-t5-light);
+    color: var(--c-t5-dark);
+}
+
+
+
+
+
+
+
+
+article{
+    display: none;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding:0;
+    height: 90%;
+    width: 80%;
+
+    border-radius: 0 1rem 0 0;
+
+}
+
+.show{
+    display:flex;
+    z-index: 100;
+}
+
+article a{
+    display:block;
+    width:100%;
+    height:100%;
+    padding: 2% 4% 2% 4%;
+    text-decoration: none;
+}
+
+section {
+    width:100%;
+    height:100%;
+
+    text-decoration: none;
+
+    border-width: 5px;
+    border-style: dotted;
+}
+
+
+.img_container{
+    height:80%;
+    margin:2%;
+    padding:0;
+    overflow:hidden;
+}
+
+.intro_img{
+    width:100%;
+
+}
+
+
+.header_and_desc{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.header_and_desc h2,p{
+    margin:1%;
+    padding:0;
+}
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+
+    width:80%;
+    margin: 0 0 0 12.5%;
+    height: 20vh;
+    background-color: var(--c-onbg);
+    border-radius: 0 0 1rem 1rem;
+}
+
+footer h3{
+    margin:1%;
+    padding:0;
+    color: var(--c-text-pri);
+}
+
