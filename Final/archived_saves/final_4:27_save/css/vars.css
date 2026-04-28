@@ -1,0 +1,79 @@
+/* CSS variables */
+
+:root {
+  /* COLORS */
+
+
+
+  /* base */
+  --c-bg: #FFF;
+  --c-onbg: linear-gradient(180deg,rgba(175, 225, 200, 1) 0%, rgb(225, 225, 225) 100%);
+
+/* shadows, saturation, highlights */
+  --c-shadow-2: rgba(0,0,0,0.2);
+  --c-shadow-4: rgba(0,0,0,0.4);
+  --c-glow-2: rgba(255,255,255,0.2);
+  --c-glow-4: rgba(255,255,255,0.4);
+
+  --c-sat-red-1: rgba(255,0,0,0.1);
+  --c-sat-orng-1: rgba(255,150,0,0.1);
+  --c-sat-yel-1: rgba(255,200,0,0.1);
+  --c-sat-grn-1: rgba(0, 255, 0, 0.1);
+  --c-sat-blue-1: rgba(0, 0, 255, 0.1);
+  --c-sat-pur-1: rgba(150, 0, 255, 0.1);
+
+  --c-sat-red-2: rgba(255,0,0,0.2);
+  --c-sat-orng-2: rgba(255,150,0,0.2);
+  --c-sat-yel-2: rgba(255,200,0,0.2);
+  --c-sat-grn-2: rgba(0, 255, 0, 0.2);
+  --c-sat-blue-2: rgba(0, 0, 255, 0.2);
+  --c-sat-pur-2: rgba(150, 0, 255, 0.2);
+
+  --c-sat-red-4: rgba(255,0,0,0.4);
+  --c-sat-orng-4: rgba(255,150,0,0.4);
+  --c-sat-yel-4: rgba(255,200,0,0.4);
+  --c-sat-grn-4: rgba(0, 255, 0, 0.4);
+  --c-sat-blue-4: rgba(0, 0, 255, 0.4);
+  --c-sat-pur-4: rgba(150, 0, 255, 0.4);
+
+  /* t1: red */
+  --c-t1-pri: rgb(150, 25, 0);
+  --c-t1-sec: rgb(200, 32, 0);
+  --c-t1-ter: rgb(255, 255, 255);
+
+  /* t2: gold-ish */
+  --c-t2-pri: rgb(125, 75, 0);
+  --c-t2-sec: rgb(175, 125, 0);
+  --c-t2-ter: rgb(255, 255, 255);
+
+  /* t3: green */
+  --c-t3-pri: rgb(25, 100, 25);
+  --c-t3-sec: rgb(50, 150, 50);
+  --c-t3-ter: rgb(255, 255, 255);
+
+  /* t4: blue */
+  --c-t4-pri: rgb(50, 50, 150);
+  --c-t4-sec: rgb(100, 100, 200);
+  --c-t4-ter: rgb(255, 255, 255);
+
+
+  /* t5: purple */
+  --c-t5-pri: rgb(125, 0, 150);
+  --c-t5-sec: rgb(175, 50, 200);
+  --c-t5-ter: rgb(255, 255, 255);
+
+
+
+
+  --c-text-pri: #000;
+  --c-text-sec: rgba(255,255,255,0.5);
+  --c-text-ter: #FFF;
+
+
+
+
+
+
+
+
+ }
