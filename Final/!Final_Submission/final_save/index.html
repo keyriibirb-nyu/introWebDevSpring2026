@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+    <title>Kieran Jones - Work</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/b669e7c96c.js" crossorigin="anonymous"></script>
+
+    <!-- greensock core library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <!-- js file -->
+    <script src="./js/main.js"></script>
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER BEGIN -->
+    <header class="home_header">
+        <div class="blur_bg">
+            <iframe src="./p5js/surfs_up_bg/index.html" width="100%" height="100vh" scrolling="no"></iframe>
+        </div>
+        <div class="header_text">
+            <a href="./index.html">
+                 <h1 id="name_logo" class="name_logo"></h1>
+                <h1 aria-hidden="true">
+                    <span id="scramble-text-1"></span>
+                </h1>
+                <h3>UX/UI &#8226 Web Design &#8226 Web Development</h3>
+            </a>
+       </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- NAV BEGIN -->
+    <nav class="home_nav">
+        <ul>
+             <li><a id="work_btn_home" class="active" href="./index.html#work">Work</a></li>
+             <li><a id="abt_btn_home" href="./about/index.html">About</a></li>
+        </ul>
+    </nav>
+    <!-- NAV END -->
+
+    <!-- MAIN BEGIN -->
+    <!-- main = file folder setup -->
+    <main id="work" class="home_wrapper">
+        <!-- tabs for file folders -->
+        <div class="tabs">
+            <ul>
+             <li id="tab1_li"><a id="tab1" class="show" href="./project1/index.html">Web Des</a></li>
+             <li id="tab2_li"><a id="tab2" href="./project2/index.html">Web Dev</a></li>
+             <li id="tab3_li"><a id="tab3" href="./project3/index.html">UX / UI</a></li>
+             <li id="tab4_li"><a id="tab4" href="./project4/index.html">App Des</a></li>
+             <li id="tab5_li"><a id="tab5" href="./project5/index.html">Misc.</a></li>
+            </ul>
+        </div>
+
+        <!-- ARTICLE BEGIN -->
+        <!-- file 1 -->
+        <article class="home_article" id="intro1">
+            <a href="./project1/index.html">
+                <section>
+                    <div class="img_container">
+                        <img class="intro_img" src="./img/SS_FIGMA_SC.png" alt="SS website header">
+                    </div>
+                    <div class="header_and_desc">
+                        <h3>SS Web Design</h3>
+                        <p>Locksmith company's website design for both desktop and mobile, done on Figma.
+                        </p>
+                    </div>
+                </section>
+            </a>
+        </article>
+        <!-- file 2 -->
+        <article class="home_article" id="intro2">
+            <a href="./project2/index.html">
+                <section>
+                    <div class="img_container">
+                        <img class="intro_img" src="./img/SS_CODE_SC.png" alt="HTML code: header portion of the SS site">
+                    </div>
+                    <div class="header_and_desc">
+                        <h3>SS Web Development</h3>
+                        <p>Implementing the website design with HTML, CSS, and Javascript.
+                        </p>
+                    </div>
+                </section>
+            </a>
+        </article>
+        <!-- file 3 -->
+        <article class="home_article" id="intro3">
+            <a href="./project3/index.html">
+                <section>
+                    <div class="img_container">
+                        <img class="intro_img" src="https://placecats.com/600/600?fit=contain&position=top" alt="a cute cat placeholder">
+                    </div>
+                    <div class="header_and_desc">
+                        <h3>UX/UI Design and Analysis</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus.
+                        </p>
+                    </div>
+                </section>
+            </a>
+        </article>
+        <!-- file 4 -->
+        <article class="home_article" id="intro4">
+            <a href="./project4/index.html">
+                <section>
+                    <div class="img_container">
+                        <img class="intro_img" src="https://placecats.com/500/600?fit=contain&position=top" alt="a cute cat placeholder">
+                    </div>
+                    <div class="header_and_desc">
+                        <h3>Mobile App Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus.
+                        </p>
+                    </div>
+                </section>
+            </a>
+        </article>
+        <!-- file 5 -->
+        <article class="home_article" id="intro5">
+            <a href="./project5/index.html">
+                <section>
+                    <div class="img_container">
+                        <img class="intro_img" src="https://placecats.com/400/600?fit=contain&position=top" alt="a cute cat placeholder">
+                    </div>
+                    <div class="header_and_desc">
+                        <h3>Miscellaneous Projects</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus.
+                    </div>
+                </section>
+            </a>
+        </article>
+        <!-- ARTICLE END -->
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER BEGIN -->
+    <footer>
+    </footer>
+    <!-- FOOTER END -->
+
+<!-- HOME INTRO JS -->
+<!-- text plugin -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/TextPlugin.min.js"></script>
+<!-- js code -->
+<script type="text/javascript">
+
+    gsap.registerPlugin(TextPlugin);
+    // print out the name
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.to("#name_logo", 1, {
+            text: "Kieran Jones"
+        });
+    });
+</script>
+</body>
+</html>

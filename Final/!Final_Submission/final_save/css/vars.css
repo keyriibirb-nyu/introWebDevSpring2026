@@ -1,0 +1,51 @@
+/* CSS variables */
+
+:root {
+/* COLORS */
+/* base */
+  --c-bg: #FFF;
+  --c-onbg: linear-gradient(180deg,rgba(175, 225, 200, 1) 0%, rgb(225, 225, 225) 100%);
+  --c-onbg-alt: rgb(225,225,225);
+/* text colors */
+  --c-text-pri: #000;
+  --c-text-sec: rgba(255,255,255,0.5);
+  --c-text-ter: #FFF;
+
+/* shadows, saturation, highlights */
+  --c-shadow-2: rgba(0,0,0,0.2);
+  --c-shadow-4: rgba(0,0,0,0.4);
+
+  --c-glow-2: rgba(255,255,255,0.2);
+  --c-glow-4: rgba(255,255,255,0.4);
+
+  --c-sat-red-2: rgba(255,0,0,0.2);
+  --c-sat-grn-2: rgba(0, 255, 0, 0.2);
+
+  --c-sat-red-4: rgba(255,0,0,0.4);
+  --c-sat-grn-4: rgba(0, 255, 0, 0.4);
+
+/* t1: red 1 */
+  --c-t1-pri: rgb(150, 25, 0);
+  --c-t1-sec: rgb(200, 32, 0);
+  --c-t1-ter: rgb(255, 255, 255);
+
+/* t2: red 2 */
+  --c-t2-pri: rgb(150, 50, 25);
+  --c-t2-sec: rgb(200, 50, 25);
+  --c-t2-ter: rgb(255, 255, 255);
+
+/* t3: red 3 */
+  --c-t3-pri: rgb(150, 75, 50);
+  --c-t3-sec: rgb(200, 75, 55);
+  --c-t3-ter: rgb(255, 255, 255);
+
+/* t4: red 4 */
+  --c-t4-pri: rgb(150, 100, 75);
+  --c-t4-sec: rgb(200, 100, 100);
+  --c-t4-ter: rgb(255, 255, 255);
+
+/* t5: red 5 */
+  --c-t5-pri: rgb(150, 125, 100);
+  --c-t5-sec: rgb(200, 125, 125);
+  --c-t5-ter: rgb(255, 255, 255);
+ }
